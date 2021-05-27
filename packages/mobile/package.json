@@ -1,11 +1,25 @@
 {
   "name": "@zeiq/mobile",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "main": "dist/bundle.js",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
-    "build": "rollup src/main.js --file dist/bundle.js --format umd --name \"zeiqBase\""
+    "start": "rollup -c rollup.config.js -w",
+    "build": "rollup -c rollup.config.js"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "rollup": "^2.50.2"
   },
   "peerDependencies": {
     "react": ">=16.8.0"
-  }
+  },
+  "gitHead": "5e05d0e9eb676b56615bf345d4456c1e630176bd"
 }

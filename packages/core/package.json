@@ -1,6 +1,6 @@
 {
   "name": "@zeiq/core",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "main": "dist/bundle.js",
   "files": [
     "dist"
@@ -10,13 +10,16 @@
   },
   "scripts": {
     "start": "rollup -c rollup.config.js -w",
-    "build": "rollup -c rollup.config.js",
-    "publish": "lerna publish"
+    "build": "rollup -c rollup.config.js"
   },
   "peerDependencies": {
     "react": ">=16.8.0"
   },
   "dependencies": {
     "lodash": "^4.17.21"
-  }
+  },
+  "devDependencies": {
+    "rollup": "^2.50.2"
+  },
+  "gitHead": "5e05d0e9eb676b56615bf345d4456c1e630176bd"
 }
