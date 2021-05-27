@@ -1,6 +1,6 @@
 {
   "name": "@zeiq/core",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "main": "dist/bundle.js",
   "files": [
     "dist"
@@ -19,7 +19,14 @@
     "lodash": "^4.17.21"
   },
   "devDependencies": {
-    "rollup": "^2.50.2"
+    "rollup": "^2.50.2",
+    "rollup-plugin-commonjs": "^9.0.0",
+    "rollup-plugin-json": "^3.0.0",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-globals": "^1.2.1",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-sourcemaps": "^0.4.2",
+    "rollup-plugin-typescript2": "^0.11.1"
   },
-  "gitHead": "6fd911e98475a58330ab894d6a03301f5b864cb4"
+  "gitHead": "d0a1ea795a2f9e2a79a60ccd854e8b1aca17e2c1"
 }
