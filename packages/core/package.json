@@ -1,6 +1,6 @@
 {
   "name": "@zeiq/core",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "main": "dist/bundle.js",
   "files": [
     "dist"
@@ -12,10 +12,18 @@
     "start": "rollup -c rollup.config.js -w",
     "build": "rollup -c rollup.config.js"
   },
-  "peerDependencies": {
-    "react": ">=16.8.0"
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
   },
   "dependencies": {
+    "@apollo/client": "^3.3.19",
+    "apollo-link": "^1.2.14",
+    "apollo-link-context": "^1.0.20",
+    "apollo-link-http": "^1.5.17",
+    "apollo-server-micro": "^2.24.1",
+    "js-cookie": "^2.2.1",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
@@ -28,5 +36,5 @@
     "rollup-plugin-sourcemaps": "^0.4.2",
     "rollup-plugin-typescript2": "^0.11.1"
   },
-  "gitHead": "a62ddd264e01f4bf901ee755a48a8f2719623781"
+  "gitHead": "2e9ed1ed06462a6ca528958aad27d9ec56c862f2"
 }
