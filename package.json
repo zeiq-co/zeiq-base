@@ -1,6 +1,6 @@
 {
   "name": "@zeiq/base",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "",
   "main": "index.js",
   "publishConfig": {
@@ -16,7 +16,7 @@
     "url": "git+https://github.com/zeiq-co/zeiq-base.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/zeiq-co/zeiq-base/issues"
   },

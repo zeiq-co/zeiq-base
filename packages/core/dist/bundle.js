@@ -1,19 +1,31 @@
-(function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
-  typeof define === 'function' && define.amd ? define(['exports'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.zeiqBase = {}));
-}(this, (function (exports) { 'use strict';
+(function (factory) {
+  typeof define === 'function' && define.amd ? define(factory) :
+  factory();
+}((function () { 'use strict';
 
-  const cl = (text) => {
-    console.log(text);
-  };
+  (function (factory) {
+    typeof define === 'function' && define.amd ? define(factory) :
+    factory();
+  }((function () {
+    (function (global, factory) {
+      typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
+      typeof define === 'function' && define.amd ? define(['exports'], factory) :
+      (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.zeiqBase = {}));
+    }(undefined, (function (exports) {
+      const cl = (text) => {
+        console.log(text);
+      };
 
-  var helpers = { cl };
+      var helpers = { cl };
 
-  var index = { helpers };
+      var index = { helpers };
 
-  exports.utils = index;
+      exports.utils = index;
 
-  Object.defineProperty(exports, '__esModule', { value: true });
+      Object.defineProperty(exports, '__esModule', { value: true });
+
+    })));
+
+  })));
 
 })));
