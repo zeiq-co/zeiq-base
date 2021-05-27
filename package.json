@@ -1,8 +1,11 @@
 {
-  "name": "zeiq-base",
-  "version": "1.0.4",
+  "name": "@zeiq/base",
+  "version": "1.0.5",
   "description": "",
   "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",

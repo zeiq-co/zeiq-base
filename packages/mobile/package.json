@@ -1,9 +1,12 @@
 {
-  "name": "@zeiq-base/mobile",
+  "name": "@zeiq/mobile",
   "version": "0.0.1",
   "main": "dist/bundle.js",
   "scripts": {
     "build": "rollup src/main.js --file dist/bundle.js --format umd --name \"zeiqBase\""
+  },
+  "dependencies": {
+    "@zeiq-base/core": "1.0.0"
   },
   "peerDependencies": {
     "react": ">=16.8.0"
