@@ -1,1 +1,3 @@
-console.log('hello world!');
+import utils from './utils/index';
+
+export { utils };
