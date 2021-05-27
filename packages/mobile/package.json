@@ -1,6 +1,6 @@
 {
   "name": "@zeiq/mobile",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "main": "dist/bundle.js",
   "scripts": {
     "build": "rollup src/main.js --file dist/bundle.js --format umd --name \"zeiqBase\""
