@@ -10,7 +10,8 @@
   },
   "scripts": {
     "start": "rollup -c rollup.config.js -w",
-    "build": "rollup -c rollup.config.js"
+    "build": "rollup -c rollup.config.js",
+    "publish": "lerna publish"
   },
   "peerDependencies": {
     "react": ">=16.8.0"
