@@ -1,6 +1,6 @@
 {
   "name": "@zeiq/mobile",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "main": "dist/bundle.js",
   "files": [
     "dist"
@@ -21,5 +21,5 @@
   "peerDependencies": {
     "react": ">=16.8.0"
   },
-  "gitHead": "d0a1ea795a2f9e2a79a60ccd854e8b1aca17e2c1"
+  "gitHead": "130d519cc97c054f5ac2380cf2ec164f6940f7c2"
 }
