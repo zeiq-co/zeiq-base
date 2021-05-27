@@ -1,3 +1,6 @@
-import utils from './utils/index';
+// import utils from './utils/index';
+const cl = (text) => {
+  console.log(text);
+};
 
-export { utils };
+export default { cl };
