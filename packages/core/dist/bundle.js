@@ -4,12 +4,26 @@
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.zeiqCore = {}));
 }(this, (function (exports) { 'use strict';
 
-  // import utils from './utils/index';
-  const cl = (text) => {
-    console.log(text);
+  var makeId = (length) => {
+    let result = '';
+    const characters =
+      'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    const charactersLength = characters.length;
+    // eslint-disable-next-line no-plusplus
+    for (let i = 0; i < length; i++) {
+      result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
   };
 
-  const Helpers = { cl };
+  var index = { makeId };
+
+  var helpers = /*#__PURE__*/Object.freeze({
+    __proto__: null,
+    'default': index
+  });
+
+  const Helpers = helpers;
 
   exports.Helpers = Helpers;
 

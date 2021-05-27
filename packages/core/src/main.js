@@ -1,6 +1,3 @@
-// import utils from './utils/index';
-const cl = (text) => {
-  console.log(text);
-};
+import * as helpers from './helpers';
 
-export const Helpers = { cl };
+export const Helpers = helpers;
