@@ -1,6 +1,7 @@
 {
-  "name": "@zeiq/web",
+  "name": "@zeiq-base/web",
   "version": "0.0.1",
+  "main": "dist/bundle.js",
   "scripts": {
     "build": "rollup src/main.js --file dist/bundle.js --format umd --name \"zeiqBase\""
   },
