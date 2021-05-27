@@ -1,0 +1,10 @@
+{
+  "name": "@zeiq/mobile",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "rollup src/main.js --file dist/bundle.js --format umd --name \"zeiqBase\""
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
+  }
+}
