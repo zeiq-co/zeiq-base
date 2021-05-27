@@ -5,6 +5,8 @@ import sourceMaps from 'rollup-plugin-sourcemaps';
 import json from 'rollup-plugin-json';
 import builtins from 'rollup-plugin-node-builtins';
 import globals from 'rollup-plugin-node-globals';
+import react from 'react';
+import reactDom from 'react-dom';
 
 const pkg = require('./package.json');
 
@@ -27,13 +29,20 @@ export default {
     // Allow json resolution
     json(),
     commonjs({
-      ignoreGlobals: true,
+      include: 'node_modules/**',
+      namedExports: {
+        react: Object.keys(react),
+        'react-dom': Object.keys(reactDom),
+      },
     }),
     globals(),
     builtins(),
     // Allow node_modules resolution, so you can use 'external' to control
     // Allow bundling cjs modules (unlike webpack, rollup doesn't understand cjs)
-    resolve(),
+    resolve({
+      browser: true,
+      jsnext: true,
+    }),
     // which external modules to include in the bundle
     // https://github.com/rollup/rollup-plugin-node-resolve#usage
 
