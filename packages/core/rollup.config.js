@@ -5,8 +5,8 @@ import sourceMaps from 'rollup-plugin-sourcemaps';
 import json from 'rollup-plugin-json';
 import builtins from 'rollup-plugin-node-builtins';
 import globals from 'rollup-plugin-node-globals';
-import react from 'react';
-import reactDom from 'react-dom';
+// import react from 'react';
+// import reactDom from 'react-dom';
 
 const pkg = require('./package.json');
 
@@ -30,10 +30,10 @@ export default {
     json(),
     commonjs({
       include: 'node_modules/**',
-      namedExports: {
-        react: Object.keys(react),
-        'react-dom': Object.keys(reactDom),
-      },
+      // namedExports: {
+      //   react: Object.keys(react),
+      //   'react-dom': Object.keys(reactDom),
+      // },
     }),
     globals(),
     builtins(),

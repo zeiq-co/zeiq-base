@@ -1,6 +1,6 @@
 {
   "name": "@zeiq/core",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "main": "dist/bundle.js",
   "files": [
     "dist"
@@ -36,5 +36,5 @@
     "rollup-plugin-sourcemaps": "^0.4.2",
     "rollup-plugin-typescript2": "^0.11.1"
   },
-  "gitHead": "e5aafab67217bf04ce8b503631ceca4f10f30cc9"
+  "gitHead": "924a457fd463cc66284262fa41fe6fa93c3a5bad"
 }
