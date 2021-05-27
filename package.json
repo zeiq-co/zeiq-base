@@ -4,10 +4,9 @@
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
     "version": "lerna version --force-publish",
-    "publish": "lerna run publish from-package --yes"
+    "publish": "lerna publish from-package --yes"
   },
   "devDependencies": {
     "lerna": "^4.0.0"
-  },
-  "version": "0.0.0"
+  }
 }
