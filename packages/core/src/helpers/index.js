@@ -1,3 +1,4 @@
 import makeId from './makeId';
+import absoluteUrl from './absoluteUrl';
 
-export default { makeId };
+export default { makeId, absoluteUrl };

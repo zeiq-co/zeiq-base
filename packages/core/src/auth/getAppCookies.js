@@ -2,7 +2,7 @@
  * @params {request} extracted from request response
  * @return {object} object of parse jwt cookie decode object
  */
-export function getAppCookies(req) {
+export default (req) => {
   const parsedItems = {};
   if (req.headers.cookie) {
     const cookiesItems = req.headers.cookie.split('; ');
@@ -12,4 +12,4 @@ export function getAppCookies(req) {
     });
   }
   return parsedItems;
-}
+};
