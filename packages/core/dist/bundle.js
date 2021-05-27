@@ -1,8 +1,8 @@
 (function (global, factory) {
-  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
-  typeof define === 'function' && define.amd ? define(['exports'], factory) :
-  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.zeiqCore = {}));
-}(this, (function (exports) { 'use strict';
+  typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+  typeof define === 'function' && define.amd ? define(factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.zeiqCore = factory());
+}(this, (function () { 'use strict';
 
   var makeId = (length) => {
     let result = '';
@@ -55,15 +55,20 @@
 
   var auth = { getAppCookies };
 
-  const Helpers = helpers;
-  const Libs = libs;
-  const Auth = auth;
+  const useSubmitContact = () => {
+    console.log('useSubmitContact.js');
+    return [];
+  };
 
-  exports.Auth = Auth;
-  exports.Helpers = Helpers;
-  exports.Libs = Libs;
+  var hooks = { useSubmitContact };
 
-  Object.defineProperty(exports, '__esModule', { value: true });
+  // export const Helpers = helpers;
+  // export const Libs = libs;
+  // export const Auth = auth;
+
+  var main = { ...helpers, ...libs, ...auth, ...hooks };
+
+  return main;
 
 })));
 //# sourceMappingURL=bundle.js.map
