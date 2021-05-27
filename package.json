@@ -1,28 +1,12 @@
 {
   "name": "@zeiq/base",
-  "version": "1.0.8",
-  "description": "",
-  "main": "index.js",
-  "publishConfig": {
-    "access": "public"
-  },
+  "private": true,
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
     "publish": "lerna publish"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zeiq-co/zeiq-base.git"
-  },
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/zeiq-co/zeiq-base/issues"
-  },
-  "homepage": "https://github.com/zeiq-co/zeiq-base#readme",
   "devDependencies": {
-    "lerna": "^4.0.0",
-    "rollup": "^2.50.2"
+    "lerna": "^4.0.0"
   }
 }
