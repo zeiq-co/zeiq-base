@@ -1,1 +1,5 @@
-console.log('hello world!');
+const cl = (text) => {
+  console.log(text);
+};
+
+export default { cl };
