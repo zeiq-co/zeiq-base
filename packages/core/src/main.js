@@ -1,3 +1,3 @@
-import * as helpers from './helpers';
+import helpers from './helpers';
 
 export const Helpers = helpers;

@@ -1,5 +1,6 @@
 {
   "name": "root",
+  "version": "0.0.0",
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
@@ -8,6 +9,5 @@
   },
   "devDependencies": {
     "lerna": "^4.0.0"
-  },
-  "version": "0.0.0"
+  }
 }

@@ -16,12 +16,7 @@
     return result;
   };
 
-  var index = { makeId };
-
-  var helpers = /*#__PURE__*/Object.freeze({
-    __proto__: null,
-    'default': index
-  });
+  var helpers = { makeId };
 
   const Helpers = helpers;
 
