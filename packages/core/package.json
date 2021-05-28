@@ -1,6 +1,6 @@
 {
   "name": "@zeiq/core",
-  "version": "1.0.25",
+  "version": "1.0.26",
   "main": "dist/bundle.js",
   "files": [
     "dist"
@@ -16,8 +16,8 @@
     "@apollo/client": "^3.3.19",
     "graphql": "^15.5.0",
     "lodash": "^4.17.21",
-    "sweetalert": "^2.1.2",
-    "styled-components": "^5.2.0"
+    "styled-components": "^5.2.0",
+    "sweetalert": "^2.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
