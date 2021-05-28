@@ -1,5 +1,5 @@
-const cl = (text) => {
-  console.log(text);
-};
+import forms from './forms';
+import elements from './elements';
+import libs from './libs';
 
-export default { cl };
+export default { ...forms, ...elements, ...libs };

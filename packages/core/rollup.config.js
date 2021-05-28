@@ -4,38 +4,60 @@ import commonjs from 'rollup-plugin-commonjs';
 import sourceMaps from 'rollup-plugin-sourcemaps';
 import json from 'rollup-plugin-json';
 import builtins from 'rollup-plugin-node-builtins';
-import globals from 'rollup-plugin-node-globals';
-// import react from 'react';
-// import reactDom from 'react-dom';
+import babel from '@rollup/plugin-babel';
+import replace from '@rollup/plugin-replace';
+import { terser } from 'rollup-plugin-terser';
 
 const pkg = require('./package.json');
 
 const libraryName = 'zeiq-core';
 
+const globals = {
+  lodash: 'lodash',
+  graphql: 'graphql',
+  sweetalert: 'sweetalert',
+  react: 'React',
+  'react-dom': 'ReactDom',
+  'styled-components': 'styled',
+  '@apollo/client': 'apollo',
+};
+
 export default {
   input: 'src/main.js',
   output: {
     file: pkg.main,
-    format: 'umd',
     name: camelCase(libraryName),
-    sourcemap: true,
+    format: 'umd',
+    sourcemap: 'inline',
+    globals,
   },
   // Indicate here external modules you don't wanna include in your bundle (i.e.: 'lodash')
-  external: [],
+  external: Object.keys(globals),
   watch: {
     include: ['src/**', 'node_modules'],
   },
   plugins: [
     // Allow json resolution
     json(),
-    commonjs({
-      include: 'node_modules/**',
-      // namedExports: {
-      //   react: Object.keys(react),
-      //   'react-dom': Object.keys(reactDom),
-      // },
+    replace({
+      preventAssignment: true,
+      'process.env.NODE_ENV': JSON.stringify('development'),
     }),
-    globals(),
+    babel({
+      babelrc: false,
+      exclude: 'node_modules/**',
+      presets: ['@babel/preset-react'],
+    }),
+    commonjs({ include: 'node_modules/**' }),
+    // commonjs({
+    //   include: 'node_modules/**',
+    //   namedExports: {
+    //     react: Object.keys(react),
+    //     'react-dom': Object.keys(reactDom),
+    //     'react-is': Object.keys(reactIs),
+    //     'styled-components': Object.keys(styledComponents),
+    //   },
+    // }),
     builtins(),
     // Allow node_modules resolution, so you can use 'external' to control
     // Allow bundling cjs modules (unlike webpack, rollup doesn't understand cjs)
@@ -43,9 +65,7 @@ export default {
       browser: true,
       jsnext: true,
     }),
-    // which external modules to include in the bundle
-    // https://github.com/rollup/rollup-plugin-node-resolve#usage
-
+    terser(),
     // Resolve source maps to the original source
     sourceMaps(),
   ],
