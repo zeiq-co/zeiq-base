@@ -1,3 +1,3 @@
-import ZeiqThemeProvider from './ZeiqThemeProvider';
+import ZeiqProvider from './ZeiqProvider';
 
-export default { ZeiqThemeProvider };
+export default { ZeiqProvider };

@@ -3,11 +3,10 @@ import * as Yup from 'yup';
 
 import Button from '../elements/Button';
 import TextInput from '../elements/TextInput';
-import TextArea from '../elements/TextArea';
 
-const formId = 'ContactForm';
+const formId = 'LoginForm';
 
-const ContactForm = ({
+const LoginForm = ({
   values,
   touched,
   errors,
@@ -20,16 +19,6 @@ const ContactForm = ({
     <form className="flex flex-wrap -m-2" onSubmit={handleSubmit} id={formId}>
       <div className="p-2 w-1/2">
         <TextInput
-          label="Your Name"
-          name="name"
-          value={values.name}
-          onChange={handleChange}
-          onBlur={handleBlur}
-          error={errors.name && touched.name ? errors.name : undefined}
-        />
-      </div>
-      <div className="p-2 w-1/2">
-        <TextInput
           label="Your Email"
           name="email"
           type="email"
@@ -39,15 +28,17 @@ const ContactForm = ({
           error={errors.email && touched.email ? errors.email : undefined}
         />
       </div>
-      <div className="p-2 w-full">
-        <TextArea
-          label="Your Message"
-          name="message"
-          type="message"
-          value={values.message}
+      <div className="p-2 w-1/2">
+        <TextInput
+          label="Password"
+          name="password"
+          type="password"
+          value={values.password}
           onChange={handleChange}
           onBlur={handleBlur}
-          error={errors.message && touched.message ? errors.message : undefined}
+          error={
+            errors.password && touched.password ? errors.password : undefined
+          }
         />
       </div>
       <div className="p-2 w-full">
@@ -61,23 +52,20 @@ const ContactForm = ({
 
 export default withFormik({
   mapPropsToValues: () => ({
-    name: '',
     email: '',
-    message: '',
+    password: '',
   }),
   validationSchema: Yup.object().shape({
-    name: Yup.string().required('Name is required!'),
     email: Yup.string()
       .email('Invalid email address')
       .required('Email is required!'),
-    message: Yup.string().required('Message is required!'),
+    password: Yup.string().required('Password is required!').min(6),
   }),
 
   handleSubmit: (values, { setSubmitting, props }) => {
-    console.log('handleSubmit', values);
     props.onSubmit(values).finally(() => {
       setSubmitting(false);
     });
   },
   displayName: formId, // helps with React DevTools
-})(ContactForm);
+})(LoginForm);

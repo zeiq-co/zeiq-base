@@ -8,7 +8,7 @@ const theme = { primaryColor: 'green' };
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ZeiqThemeProvider value={theme}>
+    <ZeiqThemeProvider value={{ theme }}>
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />
       </ThemeProvider>

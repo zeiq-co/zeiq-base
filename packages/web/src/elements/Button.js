@@ -1,19 +1,22 @@
 import React from 'react';
-import styled from 'styled-components';
 
-import { ThemeContext } from '../libs/ZeiqThemeProvider';
+// import { ZeiqContext } from '../libs/ZeiqProvider';
 
-const Container = styled.button`
-  color: ${(props) => props.color};
-`;
-
-const Button = () => {
-  const theme = React.useContext(ThemeContext);
+const Button = ({ children, isLoading, disabled, ...props }) => {
+  // const data = React.useContext(ZeiqContext);
+  // console.log('theme', data.theme);
 
   return (
-    <Container type="button" color={theme.primaryColor}>
-      My Button
-    </Container>
+    <button
+      type="button"
+      disabled={isLoading || disabled}
+      className={`flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg ${
+        isLoading ? 'animate-pulse ' : ''
+      }`}
+      {...props}
+    >
+      {children}
+    </button>
   );
 };
 

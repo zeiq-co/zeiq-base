@@ -1,3 +1,8 @@
 import Button from './Button';
+import Label from './Label';
+import TextInput from './TextInput';
+import TextArea from './TextArea';
+import AnchorLink from './AnchorLink';
+import Heading from './Heading';
 
-export default { Button };
+export default { Button, Label, TextInput, TextArea, AnchorLink, Heading };
