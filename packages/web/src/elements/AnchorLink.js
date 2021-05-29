@@ -1,15 +1,12 @@
 import React from 'react';
-import Link from 'next/link';
 
-const AnchorLink = ({ children, href, ...props }) => (
-  <Link href={href}>
-    <a
-      className="text-base font-medium text-gray-900 hover:text-gray-700"
-      {...props}
-    >
-      {children}
-    </a>
-  </Link>
+const AnchorLink = ({ children, ...props }) => (
+  <a
+    className="text-base font-medium text-gray-900 hover:text-gray-700 cursor-pointer"
+    {...props}
+  >
+    {children}
+  </a>
 );
 
 export default AnchorLink;
