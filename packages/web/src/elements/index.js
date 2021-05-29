@@ -1,8 +1,4 @@
-import Button from './Button';
-import Label from './Label';
-import TextInput from './TextInput';
-import TextArea from './TextArea';
-import AnchorLink from './AnchorLink';
-import Heading from './Heading';
+import TextInputGroup from './TextInputGroup';
+import TextAreaGroup from './TextAreaGroup';
 
-export default { Button, Label, TextInput, TextArea, AnchorLink, Heading };
+export default { TextInputGroup, TextAreaGroup };

@@ -1,6 +1,6 @@
 {
   "name": "@zeiq/web",
-  "version": "1.0.30",
+  "version": "1.0.31",
   "main": "dist/bundle.js",
   "files": [
     "dist"
@@ -15,6 +15,7 @@
   "dependencies": {
     "formik": "^2.2.8",
     "lodash": "^4.17.21",
+    "prop-types": "^15.7.2",
     "styled-components": "^5.2.0",
     "sweetalert": "^2.1.2",
     "yup": "^0.32.9"

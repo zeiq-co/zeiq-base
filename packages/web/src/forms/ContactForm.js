@@ -2,9 +2,9 @@ import React from 'react';
 import { withFormik } from 'formik';
 import * as Yup from 'yup';
 
-import Button from '../elements/Button';
-import TextInput from '../elements/TextInput';
-import TextArea from '../elements/TextArea';
+import Button from '../atoms/Button';
+import TextInputGroup from '../elements/TextInputGroup';
+import TextAreaGroup from '../elements/TextAreaGroup';
 
 const formId = 'ContactForm';
 
@@ -20,7 +20,7 @@ const ContactForm = ({
   return (
     <form className="flex flex-wrap -m-2" onSubmit={handleSubmit} id={formId}>
       <div className="p-2 w-1/2">
-        <TextInput
+        <TextInputGroup
           label="Your Name"
           name="name"
           value={values.name}
@@ -30,7 +30,7 @@ const ContactForm = ({
         />
       </div>
       <div className="p-2 w-1/2">
-        <TextInput
+        <TextInputGroup
           label="Your Email"
           name="email"
           type="email"
@@ -41,7 +41,7 @@ const ContactForm = ({
         />
       </div>
       <div className="p-2 w-full">
-        <TextArea
+        <TextAreaGroup
           label="Your Message"
           name="message"
           type="message"

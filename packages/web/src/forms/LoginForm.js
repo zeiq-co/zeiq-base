@@ -2,8 +2,8 @@ import React from 'react';
 import { withFormik } from 'formik';
 import * as Yup from 'yup';
 
-import Button from '../elements/Button';
-import TextInput from '../elements/TextInput';
+import Button from '../atoms/Button';
+import TextInputGroup from '../elements/TextInputGroup';
 
 const formId = 'LoginForm';
 
@@ -19,7 +19,7 @@ const LoginForm = ({
   return (
     <form className="flex flex-wrap -m-2" onSubmit={handleSubmit} id={formId}>
       <div className="p-2 w-1/2">
-        <TextInput
+        <TextInputGroup
           label="Your Email"
           name="email"
           type="email"
@@ -30,7 +30,7 @@ const LoginForm = ({
         />
       </div>
       <div className="p-2 w-1/2">
-        <TextInput
+        <TextInputGroup
           label="Password"
           name="password"
           type="password"
