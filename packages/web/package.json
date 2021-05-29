@@ -1,6 +1,6 @@
 {
   "name": "@zeiq/web",
-  "version": "1.0.26",
+  "version": "1.0.27",
   "main": "dist/bundle.js",
   "files": [
     "dist"
@@ -13,9 +13,11 @@
     "build": "rollup -c rollup.config.js"
   },
   "dependencies": {
+    "formik": "^2.2.8",
     "lodash": "^4.17.21",
     "styled-components": "^5.2.0",
-    "sweetalert": "^2.1.2"
+    "sweetalert": "^2.1.2",
+    "yup": "^0.32.9"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
