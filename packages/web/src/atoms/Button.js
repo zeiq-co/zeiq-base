@@ -23,7 +23,6 @@ const Button = ({ children, isLoading, disabled, className, ...props }) => {
 
 Button.propTypes = {
   primary: PropTypes.bool,
-  backgroundColor: PropTypes.string,
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   children: PropTypes.string.isRequired,
   onClick: PropTypes.func,
@@ -31,7 +30,6 @@ Button.propTypes = {
 
 Button.defaultProps = {
   primary: false,
-  backgroundColor: null,
   size: 'medium',
   onClick: undefined,
 };

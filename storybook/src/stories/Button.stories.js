@@ -10,7 +10,6 @@ export default {
     label: {
       name: 'button',
     },
-    backgroundColor: { control: 'color' },
     onClick: {
       table: {
         category: 'Events',
