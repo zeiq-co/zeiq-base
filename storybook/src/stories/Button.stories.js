@@ -1,13 +1,22 @@
 import React from 'react';
 
 import { Button } from '@zeiq/web';
-// import { Button } from './Button';
+// import { Button } from '../atoms/Button';
 
 export default {
   title: 'Atoms/Button',
   component: Button,
   argTypes: {
+    label: {
+      name: 'button',
+    },
     backgroundColor: { control: 'color' },
+    onClick: {
+      table: {
+        category: 'Events',
+      },
+    },
+    size: {},
   },
 };
 
