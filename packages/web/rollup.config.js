@@ -49,6 +49,7 @@ export default {
       babelrc: false,
       exclude: 'node_modules/**',
       presets: ['@babel/preset-react'],
+      plugins: ['babel-plugin-macros'],
     }),
     // commonjs({ include: 'node_modules/**' }),
     commonjs({

@@ -1,3 +1,4 @@
+import 'twin.macro';
 import React from 'react';
 import { withFormik } from 'formik';
 import * as Yup from 'yup';
@@ -18,8 +19,8 @@ const ContactForm = ({
   handleBlur,
 }) => {
   return (
-    <form className="flex flex-wrap -m-2" onSubmit={handleSubmit} id={formId}>
-      <div className="p-2 w-1/2">
+    <form tw="flex flex-wrap -m-2" onSubmit={handleSubmit} id={formId}>
+      <div tw="p-2 w-1/2">
         <TextInputGroup
           label="Your Name"
           name="name"
@@ -29,7 +30,7 @@ const ContactForm = ({
           error={errors.name && touched.name ? errors.name : undefined}
         />
       </div>
-      <div className="p-2 w-1/2">
+      <div tw="p-2 w-1/2">
         <TextInputGroup
           label="Your Email"
           name="email"
@@ -40,7 +41,7 @@ const ContactForm = ({
           error={errors.email && touched.email ? errors.email : undefined}
         />
       </div>
-      <div className="p-2 w-full">
+      <div tw="p-2 w-full">
         <TextAreaGroup
           label="Your Message"
           name="message"
@@ -51,7 +52,7 @@ const ContactForm = ({
           error={errors.message && touched.message ? errors.message : undefined}
         />
       </div>
-      <div className="p-2 w-full">
+      <div tw="p-2 w-full">
         <Button type="submit" form={formId} isLoading={isSubmitting}>
           Submit
         </Button>
