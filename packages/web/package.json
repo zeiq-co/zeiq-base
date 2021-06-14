@@ -1,6 +1,6 @@
 {
   "name": "@zeiq/web",
-  "version": "1.0.38",
+  "version": "1.0.39",
   "main": "dist/bundle.js",
   "files": [
     "dist"
@@ -18,12 +18,12 @@
   },
   "dependencies": {
     "formik": "^2.2.8",
-    "yup": "^0.32.9",
     "lodash": "^4.17.21",
     "prop-types": "^15.7.2",
     "styled-components": "^5.2.0",
     "sweetalert": "^2.1.2",
-    "twin.macro": "^2.5.0"
+    "twin.macro": "^2.5.0",
+    "yup": "^0.32.9"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
@@ -38,9 +38,8 @@
     "@storybook/preset-create-react-app": "^3.1.7",
     "@storybook/react": "^6.2.9",
     "autoprefixer": "^9",
-    "postcss": "^7",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "babel-plugin-macros": "^3.1.0",
+    "postcss": "^7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
@@ -50,7 +49,8 @@
     "rollup-plugin-node-builtins": "^2.1.2",
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-sourcemaps": "^0.4.2",
-    "rollup-plugin-terser": "^7.0.2"
+    "rollup-plugin-terser": "^7.0.2",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   },
   "peerDependencies": {
     "react": "^17.0.2",
