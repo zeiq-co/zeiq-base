@@ -9,26 +9,43 @@
     "access": "public"
   },
   "scripts": {
-    "start": "rollup -c rollup.config.js -w",
+    "start": "craco start",
+    "react-build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public",
+    "roll-upstart": "rollup -c rollup.config.js -w",
     "build": "rollup -c rollup.config.js"
   },
   "dependencies": {
     "formik": "^2.2.8",
+    "yup": "^0.32.9",
     "lodash": "^4.17.21",
     "prop-types": "^15.7.2",
     "styled-components": "^5.2.0",
     "sweetalert": "^2.1.2",
-    "twin.macro": "^2.5.0",
-    "yup": "^0.32.9"
+    "twin.macro": "^2.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
     "@babel/preset-react": "^7.13.13",
+    "@craco/craco": "^6.1.2",
     "@rollup/plugin-babel": "^5.3.0",
     "@rollup/plugin-replace": "^2.4.2",
+    "@storybook/addon-actions": "^6.2.9",
+    "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-links": "^6.2.9",
+    "@storybook/node-logger": "^6.2.9",
+    "@storybook/preset-create-react-app": "^3.1.7",
+    "@storybook/react": "^6.2.9",
+    "autoprefixer": "^9",
+    "postcss": "^7",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "babel-plugin-macros": "^3.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
     "rollup": "^2.50.2",
     "rollup-plugin-commonjs": "^9.0.0",
     "rollup-plugin-json": "^3.0.0",
@@ -41,5 +58,32 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
-  "gitHead": "c50981cc49adfe572b3c9188559daa613308699c"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }

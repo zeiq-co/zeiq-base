@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { Button } from '@zeiq/web';
-// import { Button } from '../atoms/Button';
+import Button from '../components/atoms/Button';
 
 export default {
   title: 'Atoms/Button',

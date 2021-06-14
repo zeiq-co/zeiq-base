@@ -7,9 +7,6 @@ import builtins from 'rollup-plugin-node-builtins';
 import babel from '@rollup/plugin-babel';
 import replace from '@rollup/plugin-replace';
 import { terser } from 'rollup-plugin-terser';
-import react from 'react';
-import reactDom from 'react-dom';
-import styledComponents from 'styled-components';
 
 const pkg = require('./package.json');
 
@@ -24,8 +21,8 @@ const globals = {
   'styled-components': 'styled',
 };
 
-export default {
-  input: 'src/main.js',
+const rollup = {
+  input: 'src/components/main.js',
   output: {
     file: pkg.main,
     name: camelCase(libraryName),
@@ -36,7 +33,7 @@ export default {
   // Indicate here external modules you don't wanna include in your bundle (i.e.: 'lodash')
   external: Object.keys(globals),
   watch: {
-    include: ['src/**', 'node_modules'],
+    include: ['src/components/**', 'node_modules'],
   },
   plugins: [
     // Allow json resolution
@@ -73,3 +70,5 @@ export default {
     sourceMaps(),
   ],
 };
+
+export default rollup;
