@@ -11,9 +11,9 @@
   "scripts": {
     "start": "start-storybook -p 6006 -s public",
     "build": "rollup -c rollup.config.js",
+    "build-storybook": "build-storybook -s public",
     "react-start": "craco start",
     "react-build": "craco build",
-    "build-storybook": "build-storybook -s public",
     "roll-upstart": "rollup -c rollup.config.js -w"
   },
   "dependencies": {
