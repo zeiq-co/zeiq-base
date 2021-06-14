@@ -2,8 +2,6 @@ import tw from 'twin.macro';
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// import { ZeiqContext } from '../libs/ZeiqProvider';
-
 const Button = (props) => {
   const {
     children,
