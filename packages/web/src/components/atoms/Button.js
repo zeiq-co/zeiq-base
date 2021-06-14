@@ -4,9 +4,16 @@ import PropTypes from 'prop-types';
 
 // import { ZeiqContext } from '../libs/ZeiqProvider';
 
-const Button = ({ children, isLoading, disabled, className, ...props }) => {
-  // const data = React.useContext(ZeiqContext);
-  // console.log('theme', data.theme);
+const Button = (props) => {
+  const {
+    children,
+    isLoading,
+    disabled,
+    className,
+    primary,
+    size,
+    ...otherProps
+  } = props;
 
   return (
     <button
@@ -14,10 +21,16 @@ const Button = ({ children, isLoading, disabled, className, ...props }) => {
       disabled={isLoading || disabled}
       className={className}
       css={[
-        tw`flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg`,
+        tw`text-indigo-100 transition-colors duration-150 border-0 rounded focus:outline-none`,
         isLoading && tw`animate-pulse`,
+        size === 'small' && tw`py-1 px-4 text-sm`,
+        size === 'medium' && tw`py-2 px-6`,
+        size === 'large' && tw`py-2 px-8 text-lg`,
+        primary
+          ? tw`bg-green-500 hover:bg-green-700`
+          : tw`bg-indigo-500 hover:bg-indigo-700`,
       ]}
-      {...props}
+      {...otherProps}
     >
       {children}
     </button>
@@ -29,12 +42,16 @@ Button.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   children: PropTypes.string.isRequired,
   onClick: PropTypes.func,
+  isLoading: PropTypes.bool,
+  disabled: PropTypes.bool,
 };
 
 Button.defaultProps = {
   primary: false,
   size: 'medium',
-  onClick: undefined,
+  onClick: () => {},
+  isLoading: false,
+  disabled: false,
 };
 
 export default Button;
