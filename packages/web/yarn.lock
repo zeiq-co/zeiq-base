@@ -2815,7 +2815,7 @@
     prop-types "^15.7.2"
     regenerator-runtime "^0.13.7"
 
-"@storybook/addons@6.2.9":
+"@storybook/addons@6.2.9", "@storybook/addons@^6.2.9":
   version "6.2.9"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-6.2.9.tgz#b7ba2b9f0e15b852c7d6b57d04fb0a493c57477c"
   integrity sha512-GnmEKbJwiN1jncN9NSA8CuR1i2XAlasPcl/Zn0jkfV9WitQeczVcJCPw86SGH84AD+tTBCyF2i9UC0KaOV1YBQ==
@@ -3273,7 +3273,7 @@
     prettier "~2.2.1"
     regenerator-runtime "^0.13.7"
 
-"@storybook/theming@6.2.9":
+"@storybook/theming@6.2.9", "@storybook/theming@^6.2.9":
   version "6.2.9"
   resolved "https://registry.yarnpkg.com/@storybook/theming/-/theming-6.2.9.tgz#16bf40180861f222c7ed1d80abd5d1e3cb315660"
   integrity sha512-183oJW7AD7Fhqg5NT4ct3GJntwteAb9jZnQ6yhf9JSdY+fk8OhxRbPf7ov0au2gYACcGrWDd9K5pYQsvWlP5gA==
@@ -4053,18 +4053,6 @@
   version "4.2.2"
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
-
-"@zeiq/web@^1.0.31":
-  version "1.0.31"
-  resolved "https://registry.yarnpkg.com/@zeiq/web/-/web-1.0.31.tgz#5ea9b48668cd57a5cda619a7a72d98903adeab58"
-  integrity sha512-c46fjU+am792Et9iP5slTmVQY6QwxZbQRGJ6ozrGQvs7i9pgcgGjuvioXbrMAKq77w/94fbuv45c+qOF1LlVbw==
-  dependencies:
-    formik "^2.2.8"
-    lodash "^4.17.21"
-    prop-types "^15.7.2"
-    styled-components "^5.2.0"
-    sweetalert "^2.1.2"
-    yup "^0.32.9"
 
 abab@^2.0.3:
   version "2.0.5"
