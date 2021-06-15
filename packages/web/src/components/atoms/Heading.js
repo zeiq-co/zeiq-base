@@ -1,9 +1,9 @@
-import tw from 'twin.macro';
+import 'twin.macro';
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Heading = ({ type, children, className, ...props }) => {
-  const classNameMerged =
-    'sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900';
+const Heading = ({ type, color, children, className, ...props }) => {
+  const classNameMerged = 'sm:text-3xl text-2xl font-medium title-font mb-4';
 
   if (type === 'h1') {
     return (
@@ -32,6 +32,16 @@ const Heading = ({ type, children, className, ...props }) => {
       {children}
     </h4>
   );
+};
+
+Heading.propTypes = {
+  type: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4']),
+  color: PropTypes.string,
+};
+
+Heading.defaultProps = {
+  type: 'h1',
+  color: 'text-gray-900',
 };
 
 export default Heading;
