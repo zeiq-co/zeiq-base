@@ -1,5 +1,6 @@
 import 'twin.macro';
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const AnchorLink = ({ children, className, ...props }) => (
   <a
@@ -10,5 +11,14 @@ const AnchorLink = ({ children, className, ...props }) => (
     {children}
   </a>
 );
+
+AnchorLink.defaultProps = {};
+AnchorLink.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+    PropTypes.string,
+  ]).isRequired,
+};
 
 export default AnchorLink;

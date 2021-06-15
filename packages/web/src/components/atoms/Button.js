@@ -35,21 +35,24 @@ const Button = (props) => {
   );
 };
 
-Button.propTypes = {
-  primary: PropTypes.bool,
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
-  children: PropTypes.string.isRequired,
-  onClick: PropTypes.func,
-  isLoading: PropTypes.bool,
-  disabled: PropTypes.bool,
-};
-
 Button.defaultProps = {
   primary: false,
   size: 'medium',
   onClick: () => {},
   isLoading: false,
   disabled: false,
+};
+Button.propTypes = {
+  primary: PropTypes.bool,
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  onClick: PropTypes.func,
+  isLoading: PropTypes.bool,
+  disabled: PropTypes.bool,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+    PropTypes.string,
+  ]).isRequired,
 };
 
 export default Button;

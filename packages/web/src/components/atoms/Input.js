@@ -1,6 +1,6 @@
 import 'twin.macro';
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const Input = ({ name, className, ...props }) => (
   <input
@@ -13,8 +13,9 @@ const Input = ({ name, className, ...props }) => (
   />
 );
 
-Input.propTypes = {};
-
+Input.propTypes = {
+  name: PropTypes.string.isRequired,
+};
 Input.defaultProps = {};
 
 export default Input;

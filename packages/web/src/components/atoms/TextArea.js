@@ -1,14 +1,20 @@
 import 'twin.macro';
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const TextArea = ({ name, label, error, className, ...props }) => (
   <textarea
     id={name}
     name={name}
     className={className}
-    tw="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 py-4 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out "
+    tw="block w-full p-3 mt-1 border-0 text-gray-700 bg-gray-200 appearance-none focus:outline-none focus:bg-gray-300 focus:shadow-inner"
     {...props}
   />
 );
+
+TextArea.defaultProps = {};
+TextArea.propTypes = {
+  name: PropTypes.string.isRequired,
+};
 
 export default TextArea;

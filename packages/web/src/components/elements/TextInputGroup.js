@@ -1,11 +1,12 @@
 import 'twin.macro';
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Label from '../atoms/Label';
 import Input from '../atoms/Input';
 import Error from '../atoms/Error';
 
-const TextInput = ({ name, label, error, ...props }) => (
+const TextInputGroup = ({ name, label, error, ...props }) => (
   <div tw="relative">
     <Label htmlFor={name}>{label}</Label>
     <Input name={name} {...props} />
@@ -13,4 +14,13 @@ const TextInput = ({ name, label, error, ...props }) => (
   </div>
 );
 
-export default TextInput;
+TextInputGroup.defaultProps = {
+  error: undefined,
+};
+TextInputGroup.propTypes = {
+  name: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  error: PropTypes.string,
+};
+
+export default TextInputGroup;

@@ -2,6 +2,7 @@ import 'twin.macro';
 import React from 'react';
 import { withFormik } from 'formik';
 import * as Yup from 'yup';
+import PropTypes from 'prop-types';
 
 import Button from '../atoms/Button';
 import TextInputGroup from '../elements/TextInputGroup';
@@ -59,6 +60,17 @@ const ContactForm = ({
       </div>
     </form>
   );
+};
+
+ContactForm.defaultProps = {
+  enableReinitialize: true,
+  initialValues: {},
+  onSubmit: () => {},
+};
+ContactForm.propTypes = {
+  enableReinitialize: PropTypes.bool,
+  initialValues: PropTypes.object,
+  onSubmit: PropTypes.func,
 };
 
 export default withFormik({

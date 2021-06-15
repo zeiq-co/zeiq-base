@@ -6,7 +6,7 @@
     "build": "lerna run build",
     "version": "lerna version --force-publish",
     "publish": "lerna publish from-package --yes",
-    "lint": "eslint --fix --ext .jsx,.js examples/pages/*.js  packages/core/src/**/*.js packages/core/src/**/**/*.js"
+    "lint": "eslint --fix --ext .jsx,.js examples/pages/*.js  packages/core/src/**/*.js packages/core/src/**/**/*.js packages/core/src/**/**/**/*.js"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",

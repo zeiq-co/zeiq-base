@@ -34,14 +34,18 @@ const Heading = ({ type, color, children, className, ...props }) => {
   );
 };
 
-Heading.propTypes = {
-  type: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4']),
-  color: PropTypes.string,
-};
-
 Heading.defaultProps = {
   type: 'h1',
   color: 'text-gray-900',
+};
+Heading.propTypes = {
+  type: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4']),
+  color: PropTypes.string,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+    PropTypes.string,
+  ]).isRequired,
 };
 
 export default Heading;

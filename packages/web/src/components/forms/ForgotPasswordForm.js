@@ -2,6 +2,7 @@ import 'twin.macro';
 import React from 'react';
 import { withFormik } from 'formik';
 import * as Yup from 'yup';
+import PropTypes from 'prop-types';
 
 import Button from '../atoms/Button';
 import TextInputGroup from '../elements/TextInputGroup';
@@ -37,6 +38,17 @@ const ForgotPasswordForm = ({
       </div>
     </form>
   );
+};
+
+ForgotPasswordForm.defaultProps = {
+  enableReinitialize: true,
+  initialValues: {},
+  onSubmit: () => {},
+};
+ForgotPasswordForm.propTypes = {
+  enableReinitialize: PropTypes.bool,
+  initialValues: PropTypes.object,
+  onSubmit: PropTypes.func,
 };
 
 export default withFormik({
