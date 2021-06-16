@@ -20,8 +20,8 @@ const ContactForm = ({
   handleBlur,
 }) => {
   return (
-    <form tw="flex flex-wrap -m-2" onSubmit={handleSubmit} id={formId}>
-      <div tw="p-2 w-1/2">
+    <form tw="flex flex-wrap" onSubmit={handleSubmit} id={formId}>
+      <div tw="p-2 w-full">
         <TextInputGroup
           label="Your Name"
           name="name"
@@ -31,7 +31,7 @@ const ContactForm = ({
           error={errors.name && touched.name ? errors.name : undefined}
         />
       </div>
-      <div tw="p-2 w-1/2">
+      <div tw="p-2 w-full">
         <TextInputGroup
           label="Your Email"
           name="email"

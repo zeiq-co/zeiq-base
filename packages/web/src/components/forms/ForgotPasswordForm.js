@@ -19,8 +19,8 @@ const ForgotPasswordForm = ({
   handleBlur,
 }) => {
   return (
-    <form tw="flex flex-wrap -m-2" onSubmit={handleSubmit} id={formId}>
-      <div tw="p-2 w-1/2">
+    <form tw="flex flex-wrap" onSubmit={handleSubmit} id={formId}>
+      <div tw="p-2 w-full">
         <TextInputGroup
           label="Your Email"
           name="email"
