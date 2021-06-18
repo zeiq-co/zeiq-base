@@ -6,10 +6,19 @@ import Label from '../atoms/Label';
 import Input from '../atoms/Input';
 import Error from '../atoms/Error';
 
-const TextInputGroup = ({ name, label, error, ...props }) => (
+const TextInputGroup = ({ name, label, error, addon, ...props }) => (
   <div tw="relative">
     <Label htmlFor={name}>{label}</Label>
-    <Input name={name} {...props} />
+    {addon ? (
+      <div tw="flex">
+        <Input name={name} {...props} tw="rounded-l" />
+        <div tw="w-48 flex items-center justify-center bg-gray-400 rounded-r text-gray-100">
+          .gallery.co
+        </div>
+      </div>
+    ) : (
+      <Input name={name} {...props} />
+    )}
     {error && <Error>{error}</Error>}
   </div>
 );
@@ -21,6 +30,7 @@ TextInputGroup.propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   error: PropTypes.string,
+  addon: PropTypes.string,
 };
 
 export default TextInputGroup;

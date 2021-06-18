@@ -21,3 +21,10 @@ Error.args = {
   label: 'Label Text',
   error: 'This field is required',
 };
+
+export const InputAddon = Template.bind({});
+InputAddon.args = {
+  name: 'email',
+  label: 'Label Text',
+  addon: '.example.com'
+};
